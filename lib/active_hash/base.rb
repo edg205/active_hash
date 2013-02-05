@@ -67,6 +67,10 @@ module ActiveHash
         end
       end
 
+      def column_names
+        attributes.keys
+      end
+
       def insert(record)
         @records ||= []
         record.attributes[:id] ||= next_id
