@@ -68,7 +68,7 @@ module ActiveHash
       end
 
       def column_names
-        attributes.keys
+        instance_values['field_names']
       end
 
       def insert(record)
